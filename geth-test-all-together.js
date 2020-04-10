@@ -5,9 +5,9 @@ miner.start()
 var startTime = Date.now()
 for(var i = 0; i < transactionNum; i++){
     var accountArr = personal.listWallets
-    for(var i = 0; i < accountArr.length; i++){
-        if(accountArr[i].status === "Locked"){
-            personal.unlockAccount(accountArr[i].accounts[0].address, "123456", 0)
+    for(var j = 0; j < accountArr.length; j++){
+        if(accountArr[j].status === "Locked"){
+            personal.unlockAccount(accountArr[j].accounts[0].address, "123456", 0)
         }
     }
     var temp = sender
